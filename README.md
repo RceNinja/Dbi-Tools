@@ -3,8 +3,8 @@
 
 ## Visual Studio Templates for DBI projects
 
-**[Pintool Template](visualstudio-templates\PintoolTemplate\README.MD)**
+**[Pintool Template](VisualStudio-Templates/DynamoRIOTemplate/README.MD)**
 
-**[DynamoRIO Template](visualstudio-templates\DynamoRIOTemplate\README.MD)**
+**[DynamoRIO Template](VisualStudio-Templates/DynamoRIOTemplate/README.MD)**
 
-<p align="center"><img src="visualstudio-templates\PintoolTemplate\vs_templates.png" width="auto" height="auto"></p>
+<p align="center"><img src="VisualStudio-Templates/DynamoRIOTemplate/vs_templates.png" width="auto" height="auto"></p>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{DDE21186-D31B-4A8C-A7CD-A7B731FFE569}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$safeprojectname$</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_$(PlatformShortName)d</TargetName>
+    <OutDir>$(SolutionDir)Build\bin\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_$(PlatformShortName)d</TargetName>
+    <OutDir>$(SolutionDir)Build\bin\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(PlatformShortName)</TargetName>
+    <OutDir>$(SolutionDir)Build\bin\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(PlatformShortName)</TargetName>
+    <OutDir>$(SolutionDir)Build\bin\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PINTOOLTEMPLATE_EXPORTS;TARGET_IA32;HOST_IA32;TARGET_WINDOWS;__PIN__=1;PIN_CRT=1;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(PIN_ROOT)\source\include\pin;$(PIN_ROOT)\source\include\pin\gen;$(PIN_ROOT)\source\tools\InstLib;$(PIN_ROOT)\extras;$(PIN_ROOT)\extras\components\include;$(PIN_ROOT)\extras\crt;$(PIN_ROOT)\extras\crt\include;$(PIN_ROOT)\extras\crt\include\arch-x86;$(PIN_ROOT)\extras\crt\include\kernel\uapi;$(PIN_ROOT)\extras\crt\include\kernel\uapi\asm-x86;$(PIN_ROOT)\extras\libstdc++\include;$(PIN_ROOT)\extras\stlport\include;$(PIN_ROOT)\extras\xed-ia32\include\xed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FIinclude/msvc_compat.h %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PIN_ROOT)\ia32\lib;$(PIN_ROOT)\ia32\lib-ext;$(PIN_ROOT)\ia32\runtime\pincrt;$(PIN_ROOT)\extras\xed-ia32\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pin.lib;pinvm.lib;xed.lib;kernel32.lib;ntdll-32.lib;c-static.lib;m-static.lib;os-apis.lib;stlport-static.lib;crtbeginS.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/export:main %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;PINTOOLTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);TARGET_IA32E;HOST_IA32E;TARGET_WINDOWS;__PIN__=1;PIN_CRT=1;__LP64__</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(PIN_ROOT)\source\include\pin;$(PIN_ROOT)\source\include\pin\gen;$(PIN_ROOT)\source\tools\InstLib;$(PIN_ROOT)\extras;$(PIN_ROOT)\extras\components\include;$(PIN_ROOT)\extras\crt;$(PIN_ROOT)\extras\crt\include;$(PIN_ROOT)\extras\crt\include\arch-x86_64;$(PIN_ROOT)\extras\crt\include\kernel\uapi;$(PIN_ROOT)\extras\crt\include\kernel\uapi\asm-x86;$(PIN_ROOT)\extras\libstdc++\include;$(PIN_ROOT)\extras\stlport\include;$(PIN_ROOT)\extras\xed-intel64\include\xed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FIinclude/msvc_compat.h %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PIN_ROOT)\intel64\lib;$(PIN_ROOT)\intel64\lib-ext;$(PIN_ROOT)\intel64\runtime\pincrt;$(PIN_ROOT)\extras\xed-intel64\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pin.lib;pinvm.lib;xed.lib;kernel32.lib;ntdll-64.lib;c-static.lib;m-static.lib;os-apis.lib;stlport-static.lib;crtbeginS.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/export:main %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;PINTOOLTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;TARGET_IA32;HOST_IA32;TARGET_WINDOWS;__PIN__=1;PIN_CRT=1;__i386__;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(PIN_ROOT)\source\include\pin;$(PIN_ROOT)\source\include\pin\gen;$(PIN_ROOT)\source\tools\InstLib;$(PIN_ROOT)\extras;$(PIN_ROOT)\extras\components\include;$(PIN_ROOT)\extras\crt;$(PIN_ROOT)\extras\crt\include;$(PIN_ROOT)\extras\crt\include\arch-x86;$(PIN_ROOT)\extras\crt\include\kernel\uapi;$(PIN_ROOT)\extras\crt\include\kernel\uapi\asm-x86;$(PIN_ROOT)\extras\libstdc++\include;$(PIN_ROOT)\extras\stlport\include;$(PIN_ROOT)\extras\xed-ia32\include\xed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FIinclude/msvc_compat.h %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PIN_ROOT)\ia32\lib;$(PIN_ROOT)\ia32\lib-ext;$(PIN_ROOT)\ia32\runtime\pincrt;$(PIN_ROOT)\extras\xed-ia32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pin.lib;pinvm.lib;xed.lib;kernel32.lib;ntdll-32.lib;c-static.lib;m-static.lib;os-apis.lib;stlport-static.lib;crtbeginS.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/export:main %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;PINTOOLTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);TARGET_IA32E;HOST_IA32E;TARGET_WINDOWS;__PIN__=1;PIN_CRT=1;__LP64__</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(PIN_ROOT)\source\include\pin;$(PIN_ROOT)\source\include\pin\gen;$(PIN_ROOT)\source\tools\InstLib;$(PIN_ROOT)\extras;$(PIN_ROOT)\extras\components\include;$(PIN_ROOT)\extras\crt;$(PIN_ROOT)\extras\crt\include;$(PIN_ROOT)\extras\crt\include\arch-x86_64;$(PIN_ROOT)\extras\crt\include\kernel\uapi;$(PIN_ROOT)\extras\crt\include\kernel\uapi\asm-x86;$(PIN_ROOT)\extras\libstdc++\include;$(PIN_ROOT)\extras\stlport\include;$(PIN_ROOT)\extras\xed-intel64\include\xed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FIinclude/msvc_compat.h %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PIN_ROOT)\intel64\lib;$(PIN_ROOT)\intel64\lib-ext;$(PIN_ROOT)\intel64\runtime\pincrt;$(PIN_ROOT)\extras\xed-intel64\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pin.lib;pinvm.lib;xed.lib;kernel32.lib;ntdll-64.lib;c-static.lib;m-static.lib;os-apis.lib;stlport-static.lib;crtbeginS.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/export:main %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

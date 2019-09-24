@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Pintool</Name>
+    <Description>Pintool template for VS2017-2019 / MSVC v140 Toolset(2015)</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PintoolTemplate</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+
+    <LanguageTag>C++</LanguageTag>
+    <LanguageTag>C</LanguageTag>
+
+    <PlatformTag>Windows</PlatformTag>
+
+    <ProjectTypeTag>Dynamic Library</ProjectTypeTag>
+    <ProjectTypeTag>DBI</ProjectTypeTag>
+    <ProjectTypeTag>Pintool</ProjectTypeTag>
+
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="PintoolTemplate.vcxproj" File="PintoolTemplate.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">PintoolTemplate.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="main.cpp">main.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+   </Project>
+  </TemplateContent>
+</VSTemplate>
